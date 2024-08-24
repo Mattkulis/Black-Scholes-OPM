@@ -194,7 +194,7 @@ input_data = {
 input_df = pd.DataFrame(input_data)
 st.table(input_df)
 
-# Calculate Call and Put values
+# Calculate Put and Call values
 bs_model = BlackScholes(time_to_maturity, strike, current_price, volatility, interest_rate)
 call_price, put_price = bs_model.calculate_prices()
 
