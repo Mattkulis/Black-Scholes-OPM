@@ -124,9 +124,11 @@ class BlackScholes:
 # Sidebar for User Inputs
 with st.sidebar:
     st.title("📊 Black-Scholes Model")
-    st.write("`Created by:`")
+    st.markdown("<h4 style='font-size: 20px;'>Created by:</h4>", unsafe_allow_html=True)  # Set font size for the "Created by" text
     linkedin_url = "https://www.linkedin.com/in/mkulis/"
-    st.markdown(f'<a href="{linkedin_url}" target="_blank" style="text-decoration: none; color: inherit;"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="25" height="25" style="vertical-align: middle; margin-right: 10px;">`Matt Kulis `</a>', unsafe_allow_html=True)
+    st.markdown(f'<a href="{linkedin_url}" target="_blank" style="text-decoration: underline; color: inherit; text-decoration-color: blue; font-size: 20px;"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="25" height="25" style="vertical-align: middle; margin-right: 10px;">Matthew A. Kulis</a>', unsafe_allow_html=True)  # Set font size for "Matt Kulis"
+    github_url = "https://github.com/Mattkulis/Trading_Strategy_Backtesting_Streamlit_App?tab=readme-ov-file"
+    st.markdown(f'<a href="{github_url}" target="_blank" style="text-decoration: underline; color: inherit; text-decoration-color: blue; font-size: 20px;"><img src="https://cdn-icons-png.flaticon.com/128/2504/2504911.png" width="25" height="25" style="vertical-align: middle; margin-right: 10px;">GitHub Repository</a>', unsafe_allow_html=True)  # Set font size for GitHub link
 
     current_price = st.number_input("Current Asset Price", value=100.0)
     strike = st.number_input("Strike Price", value=100.0)
